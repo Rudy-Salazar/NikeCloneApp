@@ -11,7 +11,13 @@ struct ShopView: View {
     static let tag: String? = "Shop"
     
     var body: some View {
+        ScrollView {
         VStack(alignment: .leading) {
+            Spacer()
+            
+            Image(systemName: "magnifyingglass")
+                .padding(.leading, 360)
+            
             Text("Shop")
                 .font(.title)
                 .padding()
@@ -33,9 +39,11 @@ struct ShopView: View {
             ScrollView(.horizontal) {
                 HStack {
                     VStack(alignment: .leading) {
-                        Text("Image Here")
-                            .frame(width: 300, height: 300, alignment: .center)
-                            .border(Color.black)
+//                        Text("Image Here")
+//                            .frame(width: 300, height: 300, alignment: .center)
+                        Image("FirstPic")
+                            .resizable()
+                            .frame(width: 300, height: 300)
                             .padding()
                             .padding(.trailing, -35)
                             
@@ -44,12 +52,12 @@ struct ShopView: View {
                     }
                     
                     VStack(alignment: .leading) {
-                        Text("Image Here")
-                            .frame(width: 300, height: 300, alignment: .center)
-                            .border(Color.black)
+                        Image("SecondPic")
+                            .resizable()
+                            .frame(width: 300, height: 300)
                             .padding()
                             
-                        Text("Gift for Dads That Still Got It")
+                        Text("Gift for Dads Who Are Still Crushing It")
                                 .padding(.leading)
                     }
                 }
@@ -59,14 +67,16 @@ struct ShopView: View {
             Spacer()
                 .frame(width: 30, height: 30)
             
-            Text("Image Here")
-                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 175, alignment: .center)
-                .border(Color.black)
+            Image("ThirdPic")
+                .resizable()
+                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 130, maxHeight: 130, alignment: .center)
                 .padding(.bottom, -5)
             
-            Text("Image Here")
-                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 175, alignment: .center)
-                .border(Color.black)
+            Image("FourthPic")
+                .resizable()
+                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 130, maxHeight: 130, alignment: .center)
+
+        }
         }
     }
 }
